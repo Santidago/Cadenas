@@ -6,7 +6,8 @@ public class NombreUsuario {
         System.out.println("Escriba tu nombre y dos apellidos");
         String palabra = sc.nextLine();
         palabra = palabra.trim();
-        int espacios = palabra.indexOf(" ");
+
+        /*int espacios = palabra.indexOf(" ");
         String[] partes = new String[3];
         for(int i = 0; i < 2; i++){
             partes[i] = palabra.substring(0, espacios);
@@ -19,7 +20,8 @@ public class NombreUsuario {
         {
             System.out.println("ERROR");
         }
-        else {
+        else {*/
+        String[] partes = palabra.split("\\s+");
             for (int i = 0; i < partes.length; i++) {
                 partes[i] = partes[i].toLowerCase();
                 partes[i] = partes[i].substring(0, 1).toUpperCase() + partes[i].substring(1);
@@ -34,5 +36,4 @@ public class NombreUsuario {
             System.out.println(partes[0].substring(0, 1).toLowerCase() + partes[1].toLowerCase() + partes[2].substring(0, 1).toLowerCase());
         }
     }
-}
 //Tendría que rehacer con split"\\s+"
