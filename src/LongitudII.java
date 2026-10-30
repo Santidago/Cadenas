@@ -8,7 +8,7 @@ public class LongitudII {
         String[] palabras = frase.split("\\s+");
         boolean size = false;
         for (String palabra : palabras) {
-            if(palabra.length()>largo)
+            if(palabra.length()==largo)
             {
                 size =true;
                 return size;
