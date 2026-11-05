@@ -1,4 +1,4 @@
-public class cuantosSonDigitos {
+public class Digitos {
     public static void main(String[] args) {
         String prueba = "h0La Mund0 c0m0 3st4as";
         System.out.println("La frase contiene "+ cuantosSonDigitos(prueba)+" digitos");
