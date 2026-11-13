@@ -2,7 +2,7 @@
 
 public class SumarBinario {
     public static void main(String[] args) {
-        String bin1 = "100111";
+        String bin1 = "100121";
         String bin2 = "100111";
         System.out.println(sumaBinario(bin1, bin2));
     }
@@ -13,8 +13,11 @@ public class SumarBinario {
       BIN2="0".repeat(8-bin2.length());
       BIN1=String.join("",BIN1,bin1);
       BIN2=String.join("",BIN2,bin2);
-      String[] BIN=new String[8];
+      String[] BIN={"E","R","R","O","R","5","6","7"};
       for (int i = 7; i > -1; i--){
+          if (!(BIN1.charAt(i) =='1') || !(BIN1.charAt(i) =='0'|| !(BIN2.charAt(i) =='1') || !(BIN2.charAt(i) =='0'))){
+              break;
+          }
           if (BIN1.charAt(i)==BIN2.charAt(i)){
               if (BIN1.charAt(i) == '1'&&carry>=1){
                   BIN[i]="1";
